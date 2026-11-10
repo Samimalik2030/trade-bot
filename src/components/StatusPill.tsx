@@ -3,7 +3,7 @@ import type { ConnectionState, LevelStatus } from "@/lib/types";
 const LEVEL_STYLES: Record<LevelStatus, string> = {
   idle: "bg-surface-panel text-text-muted border-border/15",
   approaching: "bg-warning/15 text-warning border-warning/30",
-  touched: "bg-negative/15 text-negative border-negative/30",
+  touched: "bg-negative/15 text-negative border-negative/30 shadow-[0_0_10px_-2px_rgba(239,68,68,0.6)]",
 };
 
 const LEVEL_LABELS: Record<LevelStatus, string> = {
@@ -25,7 +25,7 @@ export function LevelStatusPill({ status }: { status: LevelStatus }) {
 
 const CONN_STYLES: Record<ConnectionState, string> = {
   connecting: "bg-warning/15 text-warning border-warning/30",
-  live: "bg-positive/15 text-positive border-positive/30",
+  live: "bg-positive/15 text-positive border-positive/30 shadow-[0_0_10px_-2px_rgba(34,197,94,0.6)]",
   stale: "bg-warning/15 text-warning border-warning/30",
   disconnected: "bg-negative/15 text-negative border-negative/30",
 };

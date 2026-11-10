@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AuthShowcase } from "@/components/AuthShowcase";
+import { Logo } from "@/components/Logo";
 
 export default function SignInPage() {
   const router = useRouter();
@@ -32,9 +33,8 @@ export default function SignInPage() {
 
         <div className="flex items-center justify-center px-6 py-12 sm:px-10">
           <div className="w-full max-w-[340px]">
-          <div className="flex items-center gap-2 mb-10 lg:hidden">
-            <span className="flex size-7 items-center justify-center rounded-md bg-accent text-[11px] font-bold text-white">FX</span>
-            <span className="text-xs font-semibold tracking-wide text-text-primary uppercase">Price Alert</span>
+          <div className="mb-10 lg:hidden">
+            <Logo />
           </div>
 
           <h1 className="text-2xl font-semibold text-text-primary tracking-tight">Sign in</h1>
@@ -118,7 +118,7 @@ export default function SignInPage() {
             <button
               type="submit"
               disabled={loading}
-              className="h-11 w-full rounded-md bg-accent text-sm font-medium text-white transition-opacity duration-150 hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
+              className="brand-gradient-bg h-11 w-full rounded-md text-sm font-medium text-white transition-opacity duration-150 hover:opacity-90 disabled:opacity-60 flex items-center justify-center gap-2"
             >
               {loading && (
                 <svg className="animate-spin" width="14" height="14" viewBox="0 0 24 24" fill="none">
